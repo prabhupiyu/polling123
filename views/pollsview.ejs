@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="polls">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Polls</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-resource.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="../chart.js/dist/Chart.min.js"></script>
+    <script src="../angular-chart.js/dist/angular-chart.min.js"></script>
+
+    <script src="./javascripts/app.js"></script>
+    <script src="./javascripts/services.js"></script>
+    <script src="./javascripts/controllers.js"></script>
+    <!--<script src="./javascripts/chartangular.js"></script>-->
+
+</head>
+
+<body ng-controller="PollListCtrl">
+    Logged In User
+    <%= user.local.email %>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/polls">Polls</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">View Polls</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Your Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+
+            <!--<div class="navbar-header"><a href="#/polls" class="navbar-brand">Polls</a></div>-->
+
+        </nav>
+        <div class="container">
+            <div ng-view></div>
+        </div>
+</body>
+
+</html>
