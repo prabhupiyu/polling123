@@ -22,3 +22,33 @@ body {
     background-color: lightblue;
     text-align: right;
 }
+
+body {
+        padding-top: 80px;
+        background-image: url("./images/poll-background4.jpg");
+        background repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+   }
+
+
+#signinform {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 2px;
+            border-top-right-radius: 2em;
+            border-top-left-radius: 2em;
+            border-bottom-right-radius: 2em;
+            border-bottom-left-radius: 2em;
+        }
+
+p,
+h1,
+label {
+            color: white !important;
+        }
+
+.jumbotron
+{
+    background: black !important;
+}
+
