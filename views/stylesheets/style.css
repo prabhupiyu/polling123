@@ -23,13 +23,6 @@ body {
     text-align: right;
 }
 
-body {
-        padding-top: 80px;
-        background-image: url("./images/poll-background4.jpg");
-        background repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-   }
 
 
 #signinform {
@@ -49,6 +42,18 @@ label {
 
 .jumbotron
 {
-    background: black !important;
+    background: rgba(0, 0, 0, 0.8) !important;
 }
 
+.carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 70%;
+            margin: auto;
+        }
+
+.carousel
+{
+     padding-top: 50px;
+    background: rgba(0, 0, 0, 0.8);
+
+}
