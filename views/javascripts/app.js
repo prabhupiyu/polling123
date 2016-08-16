@@ -27,7 +27,7 @@ myModule.config(['$routeProvider', function($routeProvider) {
 			// If invalid route, just redirect to the main list view
 			otherwise({ redirectTo: '/polls' });
 	}]);
-
+/*
 myModule.controller("PieCtrl", function ($scope) {
  
      console.log('in the controller for pie');
@@ -52,4 +52,4 @@ myModule.controller("PieCtrl", function ($scope) {
     console.log(choiceValue);
   $scope.labels = choiceText;
   $scope.data = choiceValue;
-});
+});*/
