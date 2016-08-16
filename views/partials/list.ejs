@@ -1,25 +1,33 @@
 <div class="page-header">
-	<h1>Poll List</h1>
+    <h1 id="pollListHead">Poll List</h1>
 </div>
-<div class="row">
-	<div class="col-xs-5">
-		<a href="#/new" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> New Poll</a>
-	</div>
-	<div class="col-xs-7">
-		<input type="text" class="form-control" ng-model="query" placeholder="Search for a poll">
-	</div>
-</div>
-<div class="row">
-	<div class="col-xs-12"><hr></div>
-</div>
-<div class="row" ng-switch on="polls.length">
-	<ul ng-switch-when="0">
-		<li><em>No polls in databases. Would you like to <a href="#/new">create one</a>?</li>
-	</ul>
-	<ul ng-switch-default>
-		<li ng-repeat="poll in polls | filter:query">
-			<a href="#/poll/{{poll._id}}">{{poll.question}}</a>
-		</li>
-	</ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-5">
+            <a href="#/new" class="btn btn-primary btn-success"><span class="glyphicon glyphicon-pencil"></span> New Poll</a>
+        </div>
+        <div class="col-xs-7">
+            <input id="searchbox" type="text" class="form-control" ng-model="query" placeholder="Search for a poll">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+        </div>
+    </div>
+    <div class="row" ng-switch on="polls.length" id="pollList">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <ul ng-switch-when="0">
+                <li><em>No polls in databases. Would you like to <a href="#/new">create one</a>?</li>
+	     </ul>
+        <div >
+            <ul ng-switch-default>
+                <li  ng-repeat="poll in polls | filter:query" >
+                    <a  href="#/poll/{{poll._id}}">{{poll.question}}</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
 </div>
 <p>&nbsp;</p>

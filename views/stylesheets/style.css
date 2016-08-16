@@ -1,72 +1,111 @@
  body {
-        padding-top: 80px;
-        background-image: url("../images/poll-background4.jpg");
-        background repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-   }
-
-.result-table {
-    margin: 20px 0;
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.result-table td {
-    padding: 8px;
-}
-
-.result-table > tbody > tr > td:first-child {
-    width: 25%;
-    max-width: 300px;
-    text-align: right;
-}
-
-.result-table td table {
-    background-color: lightblue;
-    text-align: right;
-}
-
-
-
-#signinform {
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 2px;
-            border-top-right-radius: 2em;
-            border-top-left-radius: 2em;
-            border-bottom-right-radius: 2em;
-            border-bottom-left-radius: 2em;
-        }
-
-#signupform {
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 2px;
-            border-top-right-radius: 2em;
-            border-top-left-radius: 2em;
-            border-bottom-right-radius: 2em;
-            border-bottom-left-radius: 2em;
-        }
-
-p,
-h1,
-label {
-            color: white !important;
-        }
-
-.jumbotron
-{
-    background: rgba(0, 0, 0, 0.6) !important;
-}
-
-.carousel-inner > .item > img,
-        .carousel-inner > .item > a > img {
-            width: 70%;
-            margin: auto;
-        }
-
-.carousel
-{
+     padding-top: 80px;
+     background-image: url("../images/poll-background4.jpg");
+     background repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+ }
+ 
+ .result-table {
+     margin: 20px 0;
+     width: 100%;
+     border-collapse: collapse;
+ }
+ 
+ .result-table td {
+     padding: 8px;
+ }
+ 
+ .result-table > tbody > tr > td:first-child {
+     width: 25%;
+     max-width: 300px;
+     text-align: right;
+ }
+ 
+ .result-table td table {
+     background-color: lightblue;
+     text-align: right;
+ }
+ 
+ #signinform {
+     background: rgba(0, 0, 0, 0.8);
+     border-radius: 2px;
+     border-top-right-radius: 2em;
+     border-top-left-radius: 2em;
+     border-bottom-right-radius: 2em;
+     border-bottom-left-radius: 2em;
+ }
+ 
+ #signupform {
+     background: rgba(0, 0, 0, 0.8);
+     border-radius: 2px;
+     border-top-right-radius: 2em;
+     border-top-left-radius: 2em;
+     border-bottom-right-radius: 2em;
+     border-bottom-left-radius: 2em;
+ }
+ 
+ p,
+ h1,
+ label {
+     color: white !important;
+ }
+ 
+ .jumbotron {
+     background: rgba(0, 0, 0, 0.6) !important;
+ }
+ 
+ .carousel-inner > .item > img,
+ .carousel-inner > .item > a > img {
+     width: 70%;
+     margin: auto;
+ }
+ 
+ .carousel {
      padding-top: 50px;
-    background: rgba(0, 0, 0, 0.5);
-
-}
+     background: rgba(0, 0, 0, 0.5);
+ }
+ /*Styles for the Polls List View*/
+ 
+ #pollListHead {
+     text-align: center;
+     color: black !important;
+     
+ }
+ 
+ #pollList {
+    
+ }
+ 
+ #pollList ul li {
+     list-style-type: none;
+     font-size: 18px;
+     text-align: center;
+     border: 3px solid black;
+     border-top-right-radius: 2em !important;
+     border-top-left-radius: 2em !important;
+     border-bottom-right-radius: 2em !important;
+     border-bottom-left-radius: 2em !important;
+     background: rgba(0, 0, 0, 0.8);
+     padding-bottom: 10px;
+     padding-top: 10px;
+     margin-bottom: 5px;
+ }
+ 
+ #pollList ul li a {
+     display: block;
+     text-decoration: none;
+     font-style: normal;
+     color: white;
+ }
+ 
+ #pollList ul li:hover {
+     font-size: 18px;
+     text-align: center;
+     background-color: rgba(102, 102, 102, 0.8);
+ }
+ 
+ #searchbox {
+     border: 2px solid black;
+     2
+ }
