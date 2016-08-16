@@ -3,14 +3,40 @@
 <html>
 
 <head>
-    <title>Node Authentication</title>
+    <title>Polling Sign In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <!-- load bootstrap css -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <!-- load fontawesome -->
     <style>
+        
+
         body {
             padding-top: 80px;
+            background-image: url("./images/poll-background4.jpg");
+            background repeat: no-repeat;
+           
+    background-attachment: fixed;
+            background-size: cover;
+   
+           
+            
+        }
+        
+        #signinform {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 2px;
+            border-top-right-radius: 2em;
+            border-top-left-radius: 2em;
+            border-bottom-right-radius: 2em;
+            border-bottom-left-radius: 2em;
+        }
+        
+        p,
+        h1,
+        label {
+            color: white;
         }
     </style>
 </head>
@@ -18,7 +44,7 @@
 <body>
     <div class="container">
 
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-sm-6 col-sm-offset-3" id="signinform">
 
             <h1><span class="fa fa-sign-in"></span> Login</h1>
 
