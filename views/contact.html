@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <!-- load fontawesome -->
+    <meta charset="utf-8">
+    <title>Polling Application</title>
+     <link rel="stylesheet" href="./stylesheets/style.css">
+       <link rel="stylesheet" href="./stylesheets/contactstyle.css">
+
+  </head>
+  <body>
+      <div class="brand">Polling Application</div>
+
+
+     <!-- Navigation -->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="div-ele1">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="index1.html">Home</a>
+					</li>
+					<li><a href="about.html">View Polls</a>
+					</li>
+					<li>
+                        <select class="dropdown">
+                        <option value="abc" style="background-color:rgba(0,0,0,0.65)">Categories</option>
+                        <option value="def" style="background-color:rgba(0,0,0,0.65)">Entertainment</option>
+                        <option value="ghi" style="background-color:rgba(0,0,0,0.65)">Sports</option>
+                        <option value="jkl" style="background-color:rgba(0,0,0,0.65)">Politics</option>
+                        <option value="jkl" style="background-color:rgba(0,0,0,0.65)">General</option>
+                        <option value="jkl" style="background-color:rgba(0,0,0,0.65)">Others</option>
+                    </select>
+					</li>
+					<li><a href="contact.html">About</a>
+					</li>
+                    <li><a href="contact.html">Contact Us</a>
+					</li>
+                    <li><a href="contact.html">Profile</a>
+					</li>
+                    <li><button class="botton-logout">Logout</button>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+		<div class="row">
+			<div class="box">
+				<div class="col-lg-12" style="color:white">
+					<hr>
+					<h2 class="intro-text text-center">
+						Contact <strong>Polling Application</strong>
+					</h2>
+					<hr>
+				</div>
+				<div class="col-md-8">
+					<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+					<div style='overflow: hidden; height: 440px; width: 700px;'>
+						<div id='gmap_canvas' style='height: 440px; width: 700px;'></div>
+						<div>
+							<small><a href="http://embedgooglemaps.com">
+									Bdaguglempskcom </a> </small>
+						</div>
+						<style>
+#gmap_canvas img {
+	max-width: none !important;
+	background: none !important
+}
+</style>
+					</div>
+					<script type='text/javascript'>
+						function init_map() {
+							var myOptions = {
+								zoom : 10,
+								center : new google.maps.LatLng(15.2993265,
+										74.12399600000003),
+								mapTypeId : google.maps.MapTypeId.ROADMAP
+							};
+							map = new google.maps.Map(document
+									.getElementById('gmap_canvas'), myOptions);
+							marker = new google.maps.Marker({
+								map : map,
+								position : new google.maps.LatLng(15.2993265,
+										74.12399600000003)
+							});
+							infowindow = new google.maps.InfoWindow(
+									{
+										content : '<strong>BoxOffice Success Predictor</strong><br>Persistent Systems goa<br>'
+									});
+							google.maps.event.addListener(marker, 'click',
+									function() {
+										infowindow.open(map, marker);
+									});
+							infowindow.open(map, marker);
+						}
+						google.maps.event.addDomListener(window, 'load',
+								init_map);
+					</script>
+					<!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+					<!-- 					<iframe width="100%" height="400" frameborder="0" scrolling="no" -->
+					<!-- 						marginheight="0" marginwidth="0" -->
+					<!-- 						src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe> -->
+				</div>
+				<div class="col-md-4" style="font-size:x-large">
+					<p>
+						Phone: <strong>0832 662 8300</strong>
+					</p>
+					<p>
+						Email: <strong><a href="mailto:abc@persistent.com" style="color:#00ffff">abc@persistent.com</a>
+						</strong>
+					</p>
+					<p>
+						Address: <strong>L-44, Software Technology Park, <br>Verna
+							Industrial Estate, <br> Verna, Goa 403722</strong>
+					</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+      <div class="footer col-xs-12">
+    Â© Copyright 2015 Polling Application. All Rights Reserved.
+    </div>
+  </body>
+</html>
