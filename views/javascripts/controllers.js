@@ -80,6 +80,7 @@ function PollNewCtrl($scope, $location, Poll) {
     // Define an empty poll model object
     $scope.poll = {
         question: '',
+        category: '',
         choices: [{
             text: ''
         }, {

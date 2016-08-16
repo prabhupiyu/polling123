@@ -7,7 +7,19 @@
 		<label for="pollQuestion">Question</label>
 		<input type="text" ng-model="poll.question" class="form-control" id="pollQuestion" placeholder="Enter poll question">
 	</div>
-	
+	<div class="form-group">
+		<label for="pollCategory" > 
+            Category</label>
+           
+            <select id="pollCategory" ng-model="poll.category" required>
+        <option value="Entertainment" ng-selected=true>Entertainment</option>
+        <option value="politics">politics</option>
+        <option value="Sports">Sports</option>
+                <option value="General">General</option>
+                <option value="other">other</option>
+    </select>
+		
+	</div>
 	<div class="form-group">
 		<label>Choices</label>
 		<div ng-repeat="choice in poll.choices">
