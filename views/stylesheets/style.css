@@ -1,6 +1,10 @@
-body {
-    padding-top: 50px;
-}
+ body {
+        padding-top: 80px;
+        background-image: url("../images/poll-background4.jpg");
+        background repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+   }
 
 .result-table {
     margin: 20px 0;
@@ -34,6 +38,15 @@ body {
             border-bottom-left-radius: 2em;
         }
 
+#signupform {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 2px;
+            border-top-right-radius: 2em;
+            border-top-left-radius: 2em;
+            border-bottom-right-radius: 2em;
+            border-bottom-left-radius: 2em;
+        }
+
 p,
 h1,
 label {
@@ -42,7 +55,7 @@ label {
 
 .jumbotron
 {
-    background: rgba(0, 0, 0, 0.8) !important;
+    background: rgba(0, 0, 0, 0.6) !important;
 }
 
 .carousel-inner > .item > img,
@@ -54,6 +67,6 @@ label {
 .carousel
 {
      padding-top: 50px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
 
 }
