@@ -17,6 +17,7 @@ var choiceSchema = new mongoose.Schema({
 
 var PollSchema = new mongoose.Schema({
 	question: { type: String, required: true },
+    category: { type: String, required: true },
 	choices: [choiceSchema]
 });
 

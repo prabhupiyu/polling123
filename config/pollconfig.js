@@ -94,6 +94,7 @@ exports.create = function (req, res) {
         // Build up poll object to save
         pollObj = {
             question: reqBody.question,
+            category: reqBody.category,
             choices: choices
         };
 
