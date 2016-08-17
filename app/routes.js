@@ -64,15 +64,24 @@ module.exports = function (app, passport) {
         });
     });
     
-    /*app.get('/polls', isLoggedIn, routes.list, function (req, res) {
-        
-    });*/
+   
 
     app.get('/polls/polls',isLoggedIn, routes.list);
     app.get('/polls/:id', isLoggedIn, routes.poll);
     app.post('/polls',isLoggedIn, routes.create);
 
-
+     app.get('/about', isLoggedIn, function (req, res) {
+        res.render('about.ejs',{
+            user: req.user // get the user out of session and pass to template
+        });
+    });
+    
+    app.get('/contact', isLoggedIn, function (req, res) {
+        res.render('contact.ejs',{
+            user: req.user // get the user out of session and pass to template
+        });
+    });
+    
     // =====================================
     // LOGOUT ==============================
     // =====================================
