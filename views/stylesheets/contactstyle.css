@@ -1,8 +1,10 @@
 html, body {
-        height: 50%;
+        height: 100%;
         margin: 0;
         padding: 0;
  }
+
+/*for map in contact page*/
 #map {
     width:800px;height:380px;align:left;
  <!--  width: 50; height: 50%; background-color: green; float:left;" -->
@@ -27,18 +29,20 @@ html, body {
     color: black;
 }
 
-
+/*for nav bar*/
 .navbar-default {
     border: none;
     background: rgba(0,0,0,0.65);
 
 }
 
+/*for nav bar*/
 .navbar {
     min-height: 0;
     border-radius: 0;
 }
 
+/*for nav bar*/
 .navbar-nav {
     display: table;
     float: none;
@@ -50,9 +54,11 @@ html, body {
     letter-spacing: 3px;
 }
 
+
 .navbar-default .navbar-nav>li>a {
     color: white;
 }
+
 
 .div-ele1 {
     width: 1290px;
@@ -120,6 +126,17 @@ a:focus {
     text-align: center;
     padding: 7px;
     font-size: 14px;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
 }
+
+/*for fixing footer at the end of page*/
+.wrapper
+{
+min-height:100%;
+position:relative;
+}
+
