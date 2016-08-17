@@ -48,7 +48,7 @@
  p,
  h1,
  label {
-     color: white !important;
+     color: white;
  }
  
  .jumbotron {
@@ -70,12 +70,9 @@
  #pollListHead {
      text-align: center;
      color: black !important;
-     
  }
  
- #pollList {
-    
- }
+ #pollList {}
  
  #pollList ul li {
      list-style-type: none;
@@ -107,5 +104,31 @@
  
  #searchbox {
      border: 2px solid black;
-     2
  }
+ /*STYLE FOR THE POLLS VIEW BEFORE VOTING*/
+ 
+ .panel-transparent {
+     background: none;
+ }
+ 
+ .panel-transparent .panel-heading {
+     background: rgba(0, 0, 0, 1);!important;
+     font-size: 40px;
+ }
+ 
+ .panel-transparent .panel-body {
+     background: rgba(0, 0, 0, 0.6);!important;
+ }
+
+#pollOptions{
+      background: rgba(0, 0, 0, 1);!important;
+}
+#panelFooter{
+     background: rgba(0, 0, 0, 0.6);!important;
+}
+#voteButton{
+     background: rgba(0, 0, 0, 1);!important;
+}
+#viewPoll{
+    color: black;!important;
+}
