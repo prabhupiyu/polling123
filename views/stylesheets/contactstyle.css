@@ -4,6 +4,10 @@ html, body {
         padding: 0;
  }
 
+
+
+
+
 /*for map in contact page*/
 #map {
     width:800px;height:380px;align:left;
@@ -140,3 +144,29 @@ min-height:100%;
 position:relative;
 }
 
+/*profile page jumbotron*/
+ #profileform {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    height: 450px;
+    width: 1000px;
+    /* padding: 20px 20px; */
+ }
+
+/*profile form*/
+.well {
+        width: 600px !important;
+    margin-left: 200px !important;
+    margin-top: 30px !important;
+    height: 200px !important;
+}
+
+
+/*profile image*/
+.imgprof
+{
+    float: right;
+    height: 70px;
+    width: 100px;
+    margin-top: -55px;
+}
