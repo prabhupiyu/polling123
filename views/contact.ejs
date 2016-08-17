@@ -93,20 +93,18 @@
 						function init_map() {
 							var myOptions = {
 								zoom : 10,
-								center : new google.maps.LatLng(15.2993265,
-										74.12399600000003),
+								center:new google.maps.LatLng(15.3686058,73.94479939999997),
 								mapTypeId : google.maps.MapTypeId.ROADMAP
 							};
 							map = new google.maps.Map(document
 									.getElementById('gmap_canvas'), myOptions);
 							marker = new google.maps.Marker({
 								map : map,
-								position : new google.maps.LatLng(15.2993265,
-										74.12399600000003)
+								position: new google.maps.LatLng(15.3686058,73.94479939999997)
 							});
 							infowindow = new google.maps.InfoWindow(
 									{
-										content : '<strong>BoxOffice Success Predictor</strong><br>Persistent Systems goa<br>'
+										content : '<strong>Polling Application</strong><br>Persistent Systems goa<br>'
 									});
 							google.maps.event.addListener(marker, 'click',
 									function() {
