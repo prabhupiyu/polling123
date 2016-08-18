@@ -1,7 +1,8 @@
-<div class="page-header">
+<!--<div class="page-header">
 	<h1>Create New Poll</h1>
-</div>
+</div>-->
 
+<div class="jumbotron">
 <form role="form" ng-submit="createPoll()">
 	<div class="form-group">
 		<label for="pollQuestion">Question</label>
@@ -28,8 +29,8 @@
 	</div>		
 	
 	<div class="row">
-		<div class="col-xs-12">
-			<button type="button" class="btn btn-default" ng-click="addChoice()"><span class="glyphicon glyphicon-plus"></span> Add another</button>
+		<div class="col-xs-12" style="margin-top: -20px; margin-bottom: 20px">
+			<button type="button" class="btn btn-default" ng-click="addChoice()"><span class="glyphicon glyphicon-plus"></span> Add Another Choice</button>
 		</div>
 	</div>
 	
@@ -37,12 +38,13 @@
 	
 	<div class="row">
 		<div class="col-xs-6">
-			<a href="#/polls" class="btn btn-default" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Poll List</a>
+			<a href="#/polls" class="btn btn-default" role="button" style=" margin-bottom: -150px; background-color: #4dd2ff; width: 35%; font-weight:bold"><span class="glyphicon glyphicon-arrow-left"></span> Back to Poll List</a>
 		</div>
 		<div class="col-xs-6">
-			<button class="btn btn-primary pull-right" type="submit">Create Poll &raquo;</button>
+<button class="btn btn-primary pull-right" type="submit" style="width: 30%; color: navy; margin-top: 20px;background-color: #66ff66;font-weight: bold;" >Create Poll &raquo;</button>
 		</div>
 	</div>
 	
 	<p>&nbsp;</p>
 </form>
+</div>
