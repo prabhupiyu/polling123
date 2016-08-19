@@ -33,15 +33,15 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-                    <li><a href="#">View Polls</a></li>
+                    <li><a href="/polls#/polls">View Polls</a></li>
                     <li><a href="#">Categories</a></li>
-                    <li><a href="#/about">About Us</a></li>
-                    <li><a href="#/contact">Contact Us</a></li>
+                    <li><a href="/polls#/about">About Us</a></li>
+                    <li><a href="/polls#/contact">Contact Us</a></li>
                     
                 </ul>
       
       <ul class="nav navbar-nav navbar-right">
-         <li><a href="/profile">Your Profile</a></li>
+         <li><a href="/profile"> <%= user.local.email %></a></li>
         <li><a href="/logout">Logout</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
