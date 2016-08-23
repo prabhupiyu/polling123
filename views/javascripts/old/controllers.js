@@ -1,14 +1,6 @@
 // Controller for the poll list
 function PollListCtrl($scope, Poll) {
     $scope.polls = Poll.query();
-    // console.log( $scope.poll.userVoted);
-    
-    $('#pie').hide(); 
-    
-   
-    
-     
-      console.log( );
 }
 
 // Controller for an individual poll
@@ -81,29 +73,6 @@ function PollItemCtrl($scope, $routeParams, socket, Poll) {
             alert('You must select an option to vote for');
         }
     };
-    
-    
-  
-    $('#doughnut').hide(); 
-    $('#polar-area').hide(); 
-    
-    $scope.chartChange=function()
-     {  
-    $('#pie').hide(); 
-    $('#doughnut').hide(); 
-    $('#polar-area').hide();
-    var id= $('#chart').val();
-    if(id=='pie')
-        $('#pie').show(); 
-    if(id=='doughnut')
-        $('#doughnut').show();
-    if(id=='polar')
-        $('#polar-area').show();
-      
-     }
-    
-    
-    
 }
 
 // Controller for creating a new poll

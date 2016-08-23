@@ -38,7 +38,7 @@
      <button id="voteButton" class="btn btn-primary btn-block btn-sm" type="submit">Vote &raquo;</button>
                        <!-- <button id="voteButton" type="button" class="btn btn-primary btn-block btn-sm">
                             Vote</button>-->
-                        <a href="#" class="small" style="color: white;">View Result</a></div>
+                        <a href="#" class="small" style="color: white;"></a></div>
                         </form>
                     </div>
 
@@ -64,11 +64,23 @@
             </td>
         </tr>
     </table>
-    {{poll.choices[0].text}}
+    
     <!--    Pie Chart of the votes-->
-    <div>
+    
+    
+    
+    <select class='form-control'  id='chart' ng-model="charts" ng-change="chartChange()" >
+    <option ng-selected=true value='pie'> Pie Chart</option>
+    <option value='doughnut'> Doughnut Chart</option>
+    <option value='polar'> Polar Area</option>  
+    
+    </select>
+    
+    
+    
+    <div >
 
-        <canvas id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-options="options">
+        <canvas  id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-options="options">
         </canvas>
     </div>
 

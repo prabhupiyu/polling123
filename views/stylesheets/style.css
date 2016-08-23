@@ -1,12 +1,4 @@
- body {
 
-     background-image: url("../images/poll-background4.jpg");
-     background repeat: no-repeat;
-     background-attachment: fixed;
-     background-size: cover;
-     font-size: 180%;
- }
- 
  .result-table {
      margin: 20px 0;
      width: 100%;
@@ -104,9 +96,7 @@
      background-color: rgba(102, 102, 102, 0.8);
  }
  
- #searchbox {
-     border: 2px solid black;
- }
+
  /*STYLE FOR THE POLLS VIEW BEFORE VOTING*/
  
  .panel-transparent {
