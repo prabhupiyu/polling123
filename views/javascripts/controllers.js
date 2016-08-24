@@ -223,6 +223,21 @@ function PollNewCtrl($scope, $location, Poll) {
             text: ''
         }]
     };
+    
+    //Method to clear answer    	
+	$scope.ClearAnswer = function(choice) {
+		delete choice.text;
+	};
+    
+     //Method to remove answer 
+    $scope.RemoveAnswer = function(key){
+        console.log(key);
+        if ($scope.poll.choices.length > 2) {
+            $scope.poll.choices.splice(key,1);
+        } else {
+            alert('At least 2 answers are needed for a poll.');
+        }
+    };
 
     // Method to add an additional choice option
     $scope.addChoice = function () {
