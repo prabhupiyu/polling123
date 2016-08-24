@@ -2,20 +2,19 @@
     <h1 id="pollListHead">Poll List</h1>
 </div>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-5">
+    <div class="row ">
+        <div class="col-xs-2">
             <a href="#/new" class="btn btn-primary btn-success"><span class="glyphicon glyphicon-pencil"></span> New Poll</a>
         </div>
-<!--
-        <div class="col-xs-3">
-        <select class='input-small' ng-model='query.level'>
+        <div class="col-xs-2">
+        <select class='input-small  form-control' ng-model='query.level'>
                 <option selected value="">All</option>
                 <option selected value='Entertainment'>Entertainment</option>
-                <option selected value='Politics'>Politics</option>
                 <option selected value='Sports'>Sports</option>
+                <option selected value='Politics'>Politics</option>
+                <option selected value='Others'>Others</option>
             </select>
         </div>
--->
         <div class="col-xs-7">
             <input id="searchbox" type="text" class="form-control" ng-model="query" placeholder="Search for a poll">
         </div>
@@ -32,7 +31,7 @@
 	     </ul>
         <div >
             <ul ng-switch-default>
-                <li  ng-repeat="poll in polls | filter:query" >
+                <li  ng-repeat="poll in polls | filter:query |orderBy:poll._id" >
                     <a  href="#/poll/{{poll._id}}">{{poll.question}}</a>
                 </li>
             </ul>

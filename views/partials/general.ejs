@@ -1,0 +1,26 @@
+<div class="page-header">
+    <h1 id="pollListHead">General Polls List</h1>
+</div>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+        </div>
+    </div>
+    <div class="row" ng-switch on="polls.length" id="pollList">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <ul ng-switch-when="0">
+                <li><em>No polls in databases. Would you like to <a href="#/new">create one</a>?</li>
+	     </ul>
+        <div >
+            <ul ng-switch-default>
+                <li  ng-repeat="poll in polls | filter:query |orderBy:poll._id" >
+                    <a  href="#/poll/{{poll._id}}">{{poll.question}}</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</div>
+<p>&nbsp;</p>
