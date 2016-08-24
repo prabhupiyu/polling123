@@ -25,7 +25,7 @@ exports.list = function (req, res) {
     console.log(req.user);
     userEmail=req.user.local.email;
     // Query Mongo for polls, just get back the question text
-    Poll.find({}, 'question', function (error, polls) {
+    Poll.find({}, 'question category', function (error, polls) {
         res.json(polls);
         
     });

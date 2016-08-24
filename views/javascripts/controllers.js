@@ -11,6 +11,109 @@ function PollListCtrl($scope, Poll) {
       console.log( );
 }
 
+// Controller for the sports poll
+function PollSportsCtrl($scope, Poll) {
+console.log('in sports controller');
+var allpolls = Poll.query();
+var sportsPolls = [];
+var count =0;
+allpolls.$promise.then(function (data){
+    console.log(data);
+   var length = data.length;
+    for(var i=0; i<length; i++){
+        if(data[i].category == "Sports"){
+            sportsPolls[count] = data[i];
+            count++;
+        }
+    }
+    console.log(sportsPolls);
+    $scope.polls = sportsPolls;
+});
+}
+
+
+//Controller for entertainments poll
+function PollEntertainmentCtrl($scope, Poll) {
+console.log('in entertainment controller');
+var allpolls = Poll.query();
+var entertainmentPolls = [];
+var count =0;
+allpolls.$promise.then(function (data){
+    console.log(data);
+   var length = data.length;
+    for(var i=0; i<length; i++){
+        if(data[i].category == "Entertainment"){
+            entertainmentPolls[count] = data[i];
+            count++;
+        }
+    }
+    console.log(entertainmentPolls);
+    $scope.polls = entertainmentPolls;
+});
+}
+
+//Controller for politics poll
+function PollPoliticsCtrl($scope, Poll) {
+console.log('in politics controller');
+var allpolls = Poll.query();
+var politicsPolls = [];
+var count =0;
+allpolls.$promise.then(function (data){
+    console.log(data);
+   var length = data.length;
+    for(var i=0; i<length; i++){
+        if(data[i].category == "politics"){
+            politicsPolls[count] = data[i];
+            count++;
+        }
+    }
+    console.log(politicsPolls);
+    $scope.polls = politicsPolls;
+});
+}
+
+//Controller for general poll
+function PollGeneralCtrl($scope, Poll) {
+console.log('in general controller');
+var allpolls = Poll.query();
+var generalPolls = [];
+var count =0;
+allpolls.$promise.then(function (data){
+    console.log(data);
+   var length = data.length;
+    for(var i=0; i<length; i++){
+        if(data[i].category == "General"){
+           generalPolls[count] = data[i];
+            count++;
+        }
+    }
+    console.log(generalPolls);
+    $scope.polls = generalPolls;
+});
+}
+
+//Controller for other poll
+function PollOtherCtrl($scope, Poll) {
+console.log('in other controller');
+var allpolls = Poll.query();
+var otherPolls = [];
+var count =0;
+allpolls.$promise.then(function (data){
+    console.log(data);
+   var length = data.length;
+    for(var i=0; i<length; i++){
+        if(data[i].category == "other"){
+           otherPolls[count] = data[i];
+            count++;
+        }
+    }
+    console.log(otherPolls);
+    $scope.polls = otherPolls;
+});
+}
+
+
+
 // Controller for an individual poll
 function PollItemCtrl($scope, $routeParams, socket, Poll) {
     $scope.poll = Poll.get({
