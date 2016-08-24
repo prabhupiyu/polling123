@@ -132,7 +132,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  <%= user.local.email %> <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  <%= user.local.userid %> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
@@ -217,8 +217,8 @@
                      <img src="./images/2.png" class="img-circle col-lg-3 imgprof" >
 
                     <p style="color:black">
-                        <strong>id</strong>:
-                        <%= user._id %>
+                        <strong>User Id</strong>:
+                        <%= user.local.userid %>
                             <br>
                             <strong>First Name</strong>:
                             <%= user.local.fname %>
