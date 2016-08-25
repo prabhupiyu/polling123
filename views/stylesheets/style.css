@@ -72,15 +72,12 @@
      list-style-type: none;
      font-size: 18px;
      text-align: center;
-     border: 3px solid black;
-     border-top-right-radius: 2em !important;
-     border-top-left-radius: 2em !important;
-     border-bottom-right-radius: 2em !important;
-     border-bottom-left-radius: 2em !important;
+     border-radius: 0.5em !important;   
      background: rgba(0, 0, 0, 0.8);
      padding-bottom: 10px;
      padding-top: 10px;
      margin-bottom: 5px;
+     box-shadow: 10px 10px 5px #888888;
  }
  
  #pollList ul li a {
@@ -124,3 +121,18 @@
 #viewPoll{
     color: black;!important;
 }
+/*new added*/
+
+.transparent {
+    opacity: 0.7;	
+}
+
+.transparent:hover {
+    opacity: 0.9;
+}
+
+.newPolls label
+{
+    color:black;
+}
+
