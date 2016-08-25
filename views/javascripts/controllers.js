@@ -28,6 +28,7 @@ allpolls.$promise.then(function (data){
     }
     console.log(sportsPolls);
     $scope.polls = sportsPolls;
+    $scope.categoryHeading = "Sports Polls";
 });
 }
 
@@ -49,6 +50,7 @@ allpolls.$promise.then(function (data){
     }
     console.log(entertainmentPolls);
     $scope.polls = entertainmentPolls;
+    $scope.categoryHeading = "Entertainment Polls";
 });
 }
 
@@ -69,6 +71,7 @@ allpolls.$promise.then(function (data){
     }
     console.log(politicsPolls);
     $scope.polls = politicsPolls;
+    $scope.categoryHeading = "Politics Polls";
 });
 }
 
@@ -89,6 +92,7 @@ allpolls.$promise.then(function (data){
     }
     console.log(generalPolls);
     $scope.polls = generalPolls;
+    $scope.categoryHeading = "General Polls";
 });
 }
 
@@ -109,6 +113,7 @@ allpolls.$promise.then(function (data){
     }
     console.log(otherPolls);
     $scope.polls = otherPolls;
+    $scope.categoryHeading = "Other Polls";
 });
 }
 

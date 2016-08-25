@@ -25,11 +25,11 @@ myModule.config(['$routeProvider', function($routeProvider) {
 			when('/poll/:pollId', { templateUrl: '/partials/item.ejs', controller: PollItemCtrl }).
 			when('/new', { templateUrl: '/partials/new.ejs', controller: PollNewCtrl }).
             when('/about', { templateUrl: '/partials/about.ejs', controller: PollNewCtrl }).
-            when('/sports', { templateUrl: '/partials/sports.ejs', controller: PollSportsCtrl }).
-         when('/entertainment', { templateUrl: '/partials/entertainment.ejs', controller: PollEntertainmentCtrl }).
-         when('/politics', { templateUrl: '/partials/politics.ejs', controller: PollPoliticsCtrl }).
-        when('/general', { templateUrl: '/partials/general.ejs', controller: PollGeneralCtrl }).
-         when('/other', { templateUrl: '/partials/other.ejs', controller: PollOtherCtrl }).
+            when('/sports', { templateUrl: '/partials/categories.ejs', controller: PollSportsCtrl }).
+         when('/entertainment', { templateUrl: '/partials/categories.ejs', controller: PollEntertainmentCtrl }).
+         when('/politics', { templateUrl: '/partials/categories.ejs', controller: PollPoliticsCtrl }).
+        when('/general', { templateUrl: '/partials/categories.ejs', controller: PollGeneralCtrl }).
+         when('/other', { templateUrl: '/partials/categories.ejs', controller: PollOtherCtrl }).
 //            when('/profile', { templateUrl: '/partials/profile.ejs', controller: PollNewCtrl }).
 			// If invalid route, just redirect to the main list view
 			otherwise({ redirectTo: '/polls' });
