@@ -1,12 +1,10 @@
-<div class="page-header">
-    <h1 id="pollListHead">Poll List</h1>
-</div>
+
 <div class="container-fluid">
     <div class="row ">
         <div class="col-xs-2">
             <a href="#/new" class="btn btn-primary btn-success"><span class="glyphicon glyphicon-pencil"></span> New Poll</a>
         </div>
-        <div class="col-xs-2">
+       <!-- <div class="col-xs-2">
         <select class='input-small  form-control' ng-model='query.level'>
                 <option selected value="">All</option>
                 <option selected value='Entertainment'>Entertainment</option>
@@ -14,25 +12,49 @@
                 <option selected value='Politics'>Politics</option>
                 <option selected value='Others'>Others</option>
             </select>
-        </div>
-        <div class="col-xs-7">
-            <input id="searchbox" type="text" class="form-control" ng-model="query" placeholder="Search for a poll">
-        </div>
+        </div>-->
+      
+          <div class="title_right">
+            <div class="col-xs-7 col-xs-5 col-xs-12 form-group pull-right top_search">
+              <div class="input-group">
+                <input type="text" class="form-control"   ng-model="query" placeholder="Search for...">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Go!</button>
+                </span>
+              </div>
+            </div>
+          </div>
+    
     </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <hr>
-        </div>
-    </div>
+
     <div class="row" ng-switch on="polls.length" id="pollList">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <ul ng-switch-when="0">
-                <li><em>No polls in databases. Would you like to <a href="#/new">create one</a>?</li>
+                <li><em>No polls in databases. Would you like to  <a href="#/new">create one</a>?</li>
 	     </ul>
-        <div >
-            <ul ng-switch-default>
-                <li  ng-repeat="poll in polls | filter:query |orderBy:poll._id" >
-                    <a  href="#/poll/{{poll._id}}">{{poll.question}}</a>
+        	<div >
+
+            <ul  class="list-group" ng-switch-default>
+                <li  class="list-group-item" ng-repeat="poll in polls | filter:query |orderBy:poll._id" >
+           
+                    <div class="row">
+                    
+                    <div class="col-md-2">
+                        <div class="review-person">
+                            <img src="/images/poll.png" alt="" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class=" col-md-7 ">
+                        <h3> <a  href="#/poll/{{poll._id}}">{{poll.question}}</a> </h3> 
+                       
+                    </div>
+                          <div class=" col-md-3 ">                          
+                              <div  class="row"> <button class="btn btn-success pull-right" type="button" >View</button></div>
+                              <div class="row"> <button class="btn btn-success pull-right" type="button" >Vote</button></div>                             
+                        </div>
+                    </div>
+                
+                  
                 </li>
             </ul>
         </div>
@@ -40,3 +62,4 @@
     </div>
 </div>
 <p>&nbsp;</p>
+
