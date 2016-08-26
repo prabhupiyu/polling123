@@ -67,7 +67,7 @@
  }
  
  #pollList {}
- 
+ /*
  #pollList ul li {
      list-style-type: none;
      font-size: 18px;
@@ -92,7 +92,7 @@
      text-align: center;
      background-color: rgba(102, 102, 102, 0.8);
  }
- 
+ */
 
  /*STYLE FOR THE POLLS VIEW BEFORE VOTING*/
  
@@ -131,8 +131,28 @@
     opacity: 0.9;
 }
 
-.newPolls label
+.newPolls label 
 {
     color:black;
 }
 
+.list-group-item
+{
+ margin:10px; 
+ border-radius: 10px ; 
+ box-shadow: 2px 2px 25px #182125;
+}
+
+.review-person {
+  width: 100%;
+    
+}
+.review-person img {
+  width: 90px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  margin: 10px auto;
+}
