@@ -95,10 +95,14 @@
  
     
     <p>
-        <em>
-			{{poll.totalVotes}} votes counted so far.
-			<span ng-show="poll.userChoice">You voted for <strong>{{poll.userChoice.text}}</strong>.</span>
-		</em>
+     <em>
+        {{poll.totalVotes}} votes counted so far.
+         <span ng-show="poll.userChoice">You voted for <strong>{{poll.userChoice.text}}</strong>.</span>
+         <span style="float:right">To share this poll
+         <input type="text" value="http://localhost:3000/shared/{{poll._id}}" style="font-weight:bold; color:black; width:440px;" readonly></span>
+
+    </em>
+
     </p>
 
     <p>
@@ -109,3 +113,4 @@
 </div>
 
 <p>&nbsp;</p>
+
