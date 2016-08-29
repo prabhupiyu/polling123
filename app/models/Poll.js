@@ -9,6 +9,12 @@ var choiceSchema = new mongoose.Schema({
 	votes: [voteSchema]
 });
 
+var commentsSchema =new mongoose.Schema({
+
+	comment : String,
+    userid   : String
+});
+
 // Document schema for polls
 /*exports.PollSchema = new mongoose.Schema({
 	question: { type: String, required: true },
@@ -18,7 +24,8 @@ var choiceSchema = new mongoose.Schema({
 var PollSchema = new mongoose.Schema({
 	question: { type: String, required: true },
     category: { type: String, required: true },
-	choices: [choiceSchema]
+	choices: [choiceSchema],
+    comments: [commentsSchema]
 });
 
 module.exports = mongoose.model('Poll',PollSchema);
