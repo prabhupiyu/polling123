@@ -98,8 +98,7 @@
      <em>
         {{poll.totalVotes}} votes counted so far.
          <span ng-show="poll.userChoice">You voted for <strong>{{poll.userChoice.text}}</strong>.</span>
-         <span style="float:right">To share this poll
-         <input type="text" value="http://localhost:3000/shared/{{poll._id}}" style="font-weight:bold; color:black; width:440px;" readonly></span>
+
 
     </em>
 
@@ -113,4 +112,33 @@
 </div>
 
 <p>&nbsp;</p>
+<<<<<<< HEAD
 
+=======
+<!--Comments Area-->
+<div class="container">
+    <div class="row" ng-repeat="comment in poll.comments">
+        <div class="col-md-3 well">
+            {{comment.userid}}
+        </div>
+        <div class="col-md-9 well">
+            {{comment.comment}}
+        </div>
+
+    </div>
+</div>
+
+<!--Comment Text Area-->
+<div class="container">
+    <div class="row">
+        <form role="form" ng-submit="comment()">
+            <div class="col-md-9">
+            <input class="form-control input-lg" type="text" placeholder="Add Your Comment Here" ng-model="commenttext">
+            </div>
+            <div class="col-md-3">
+            <button class="btn btn-primary btn-block btn-sm" type="submit">Comment</button>
+            </div>
+        </form>
+    </div>
+</div>
+>>>>>>> origin/master
