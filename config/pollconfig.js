@@ -84,6 +84,58 @@ exports.poll = function (req, res) {
     });
 };
 
+
+//get polls when shared
+exports.pollShared = function (id) {
+    // Poll ID comes in the URL
+    var pollId = id;
+
+
+    // Find the poll by its ID, use lean as we won't be changing it
+    Poll.findById(pollId, '', {
+        lean: true
+    }, function (err, poll) {
+        if (poll) {
+            var userVoted = false,
+                userChoice,
+                totalVotes = 0;
+
+            // Loop through poll choices to determine if user has voted
+            // on this poll, and if so, what they selected
+            for (c in poll.choices) {
+                var choice = poll.choices[c];
+
+                for (v in choice.votes) {
+                    var vote = choice.votes[v];
+                    totalVotes++;
+                    console.log("Total votes are :"+totalVotes);
+                  /*  console.log("Votes IP  "+vote.ip);*/
+
+                   /* if (vote.ip === (req.header('x-forwarded-for') || req.ip)) {*/
+                         if (vote.userEm === (userEmail)) {
+                       /* console.log(req.header('x-forwarded-for'));*/
+                        userVoted = true;
+                        userChoice = {
+                            _id: choice._id,
+                            text: choice.text
+                        };
+                    }
+                }
+            }
+
+            // Attach info about user's past voting on this poll
+            poll.userVoted = userVoted;
+            poll.userChoice = userChoice;
+
+            poll.totalVotes = totalVotes;
+            console.log(poll);
+            return poll;
+        } else {
+            return "error";
+        }
+    });
+};
+
 // JSON API for creating a new poll
 exports.create = function (req, res) {
     var reqBody = req.body,
