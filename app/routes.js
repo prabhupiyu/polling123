@@ -1,6 +1,9 @@
 // app/routes.js
 var routes = require('../config/pollconfig.js');
+var User = require('../app/models/user.js');
 var mypath;
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
 module.exports = function (app, passport) {
 
     // =====================================
@@ -116,6 +119,90 @@ module.exports = function (app, passport) {
         });
     });
     
+
+
+    // =====================================
+    // PROFILE PICTURE =====================
+    // =====================================
+
+var path = require('path'),
+    fs = require('fs');
+var imgname;
+
+// ...
+app.post('/upload', upload.single('file'), function (req, res) {
+
+  /*  res.send(req.file);*/
+    var tempPath = req.file.path;
+	imgname=tempPath.slice(8)+req.file.originalname;
+    var targetPath = path.resolve('./uploads/'+imgname);
+
+
+        console.log("hii in upload " +targetPath);
+        console.log("hii in temp path " +tempPath);
+        console.log("image name " +imgname);
+        console.log("user name  "+req.body.email);
+
+
+    if (path.extname(req.file.originalname).toLowerCase() == '.png')
+	{
+        fs.rename(tempPath, targetPath, function(err)
+		{
+            if (err) throw err;
+			console.log("Upload completed!");
+		});
+
+			User.findOne({ 'local.email' :req.body.email }, function(err, user) {
+				// if there are any errors, return the error
+
+				if (err)
+					return done(err);
+
+            // check to see if theres already a user with that email
+				if (user)
+				{
+				  console.log("user found "+user);
+				  user.local.profpic=imgname;
+                  user.save();
+            } else {
+                console.log("user with email id :" +req.body.email +" not found");
+                if (err)
+                return done(err);
+            }
+
+
+        });
+
+
+    } else {
+        console.log("File name :"+req.file.originalname);
+        fs.unlink(tempPath, function () {
+            if (err) throw err;
+            console.error("Only .png files are allowed!");
+        });
+    }
+    res.sendfile(path.resolve('./uploads/'+imgname));
+
+    // ...
+});
+
+/*   app.get('/upload', function (req, res) {
+        console.log("hi i am in get of profile picture"+path.resolve('./uploads/'+imname));
+       imga=path.resolve('./uploads/'+imname);
+    res.sendfile(path.resolve('./uploads/'+imname));
+       res.send(imga);
+
+});*/
+     // =====================================
+    // PROFILE SECTION  ENDS=====================
+    //
+
+
+
+
+
+
+
     // =====================================
     // LOGOUT ==============================
     // =====================================
