@@ -144,7 +144,7 @@ app.post('/upload', upload.single('file'), function (req, res) {
         console.log("user name  "+req.body.email);
 
 
-    if (path.extname(req.file.originalname).toLowerCase() == '.png')
+    if (path.extname(req.file.originalname).toLowerCase() === '.png' ||'.jpg'||'.jpeg'||'.gif')
 	{
         fs.rename(tempPath, targetPath, function(err)
 		{
@@ -181,7 +181,9 @@ app.post('/upload', upload.single('file'), function (req, res) {
             console.error("Only .png files are allowed!");
         });
     }
-    res.sendfile(path.resolve('./uploads/'+imgname));
+      /* res.sendfile(path.resolve('./uploads/'+imgname));*/
+    res.redirect('/profile')
+
 
     // ...
 });
