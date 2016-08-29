@@ -17,6 +17,11 @@ var session = require('express-session');
 
 var configDB = require('./config/database.js');
 
+
+
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
+
 // configuration ===============================================================
 mongoose.connect(configDB.url); // connect to our database
 
@@ -41,6 +46,7 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/node_modules'));
+app.use(express.static(__dirname + '/uploads'));
 // launch ======================================================================
 
 io.sockets.on('connection', routes.vote);

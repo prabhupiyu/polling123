@@ -238,7 +238,17 @@
             <div class="col-sm-6">
                 <div class="well">
                    <h3><span class="fa fa-user"></span> User</h3>
-                     <img src="./images/2.png" class="img-circle col-lg-3 imgprof" >
+                     <!--<img src="./images/2.png" class="img-circle col-lg-3 imgprof" >-->
+                    <% if(user.local.profpic){ %>
+                        <img src="../<%= user.local.profpic %>" class="img-circle col-lg-3" style="border: 3px solid black" >
+                    <% } else{ %>
+                        <img src="./images/defaultimage.png" class="img-circle col-lg-3 imgprof" >
+                    <% } %>
+                    <form method="post" enctype="multipart/form-data" action="/upload">
+                        <input type="file" name="file">
+                            <input type="submit" name="submit" value="Upload">
+                       <input type="hidden" name="email" value="<%= user.local.email %>">
+                        </form>
 
                     <p style="color:black">
                         <strong>User Id</strong>:
