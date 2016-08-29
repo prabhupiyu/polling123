@@ -1498,9 +1498,11 @@ a.user-profile {
 
 .user-profile img {
   width: 29px;
-  height: 29px;
+  height: 39px;
   border-radius: 50%;
-  margin-right: 10px; }
+  margin-right: 10px;
+
+    padding: 0px !important;}
 
 ul.top_profiles {
   height: 330px;
@@ -4129,3 +4131,23 @@ ul.notifications {
   border: 1px solid #e5e5e5; }
 
 /** /Dropzone.js **/
+
+
+/*profile pic display styling*/
+.profilepic
+{
+    border: 3px solid black;
+    height: 80px;
+    width: 80px;
+    padding: 0px !important;
+    padding: 0px !important;
+}
+
+.profthumbs
+{
+    border: 3px solid black;
+    height: 30px;
+    width: 60px;
+    padding: 0px !important;
+
+}

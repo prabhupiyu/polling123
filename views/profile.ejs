@@ -43,7 +43,12 @@
             <!-- menu profile quick info -->
             <div class="profile">
               <div class="profile_pic">
-                <img src="#" alt="..." class="img-circle profile_img">
+                <!--<img src="#" alt="..." class="img-circle profile_img">-->
+                  <% if(user.local.profpic){ %>
+                        <img src="../<%= user.local.profpic %>" class="img-circle col-lg-3 profthumbs" >
+                    <% } else{ %>
+                        <img src="./images/defaultimage.png" class="img-circle col-lg-3 profthumbs" >
+                    <% } %>
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -135,7 +140,14 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt=""><%= user.local.fname  %> <%= user.local.lname  %>
+                    <!--<img src="images/img.jpg" alt="">-->
+                      <% if(user.local.profpic){ %>
+                        <img src="../<%= user.local.profpic %>" class="img-circle col-lg-3 ">
+                    <% } else{ %>
+                        <img src="./images/defaultimage.png" class="img-circle col-lg-3 " >
+                    <% } %>
+
+                      <%= user.local.fname  %> <%= user.local.lname  %>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -240,9 +252,9 @@
                    <h3><span class="fa fa-user"></span> User</h3>
                      <!--<img src="./images/2.png" class="img-circle col-lg-3 imgprof" >-->
                     <% if(user.local.profpic){ %>
-                        <img src="../<%= user.local.profpic %>" class="img-circle col-lg-3" style="border: 3px solid black" >
+                        <img src="../<%= user.local.profpic %>" class="img-circle col-lg-3 profilepic"  >
                     <% } else{ %>
-                        <img src="./images/defaultimage.png" class="img-circle col-lg-3 imgprof" >
+                        <img src="./images/defaultimage.png" class="img-circle col-lg-3 profthumbs" >
                     <% } %>
                     <form method="post" enctype="multipart/form-data" action="/upload">
                         <input type="file" name="file">
