@@ -22,6 +22,7 @@ var configDB = require('./config/database.js');
 var multer  = require('multer')
 var upload = multer({ dest: 'uploads/' })
 
+
 // configuration ===============================================================
 mongoose.connect(configDB.url); // connect to our database
 
