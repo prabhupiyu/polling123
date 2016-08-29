@@ -175,6 +175,15 @@ function PollItemCtrl($scope, $routeParams, socket, Poll) {
         }
     });
 
+    socket.on('commented', function(data){
+        console.dir(data);
+
+            $scope.poll.comments = data.comments;
+            $scope.commenttext = "";
+
+
+    });
+
     $scope.vote = function () {
         var pollId = $scope.poll._id,
             choiceId = $scope.poll.userVote;
@@ -190,6 +199,25 @@ function PollItemCtrl($scope, $routeParams, socket, Poll) {
         }
     };
     
+    $scope.comment = function() {
+        var pollId = $scope.poll._id,
+            comment = $scope.commenttext;
+
+        if(comment){
+        var commentObj = {
+            poll_id : pollId,
+            comment : comment
+        };
+
+            socket.emit('send:comment', commentObj);
+        }
+        else{
+            alert('Your comment is a blank comment. Please type some valid comment.')
+        }
+
+
+    }
+
     
   
     $('#doughnut').hide(); 

@@ -167,7 +167,7 @@ exports.vote = function (socket) {
     socket.on('send:vote', function (data) {
        /* var ip = socket.handshake.headers['x-forwarded-for'] || socket.handshake.address.address;*/
 
-        Poll.findById(data.poll_id, function (err, poll) {
+     Poll.findById(data.poll_id, function (err, poll) {
             var choice = poll.choices.id(data.choice);
             choice.votes.push({
                 /*ip: ip*/
@@ -210,4 +210,34 @@ exports.vote = function (socket) {
             });
         });
     });
+
+     socket.on('send:comment', function(data){
+
+        Poll.findById(data.poll_id, function (err, poll) {
+        var usercomment = poll.comments;
+        usercomment.push({
+            userid: userEmail,
+            comment : data.comment
+        });
+
+    poll.save(function(err,doc) {
+           var theDoc = {
+               question: doc.question,
+                    _id: doc._id,
+                    choices: doc.choices,
+                    userVoted: doc.userVoted,
+                    totalVotes: doc.totalVotes,
+                    comments : usercomment
+           }
+
+           socket.emit('commented', theDoc);
+
+
+
+
+    });
+
+            });
+    });
 };
+
