@@ -15,6 +15,7 @@ var Poll = db.model('polls', PollSchema);*/
 var Poll = require('../app/models/Poll.js');
 var User = require('../app/models/user.js');
 var userEmail;
+var userName;
 // Main application view
 /*exports.index = function (req, res) {
     res.render('index');
@@ -24,6 +25,7 @@ var userEmail;
 exports.list = function (req, res) {
     console.log(req.user);
     userEmail=req.user.local.email;
+    userName = req.user.local.userid;
     // Query Mongo for polls, just get back the question text
     Poll.find({}, 'question category', function (error, polls) {
         res.json(polls);
@@ -216,7 +218,7 @@ exports.vote = function (socket) {
         Poll.findById(data.poll_id, function (err, poll) {
         var usercomment = poll.comments;
         usercomment.push({
-            userid: userEmail,
+            userid: userName,
             comment : data.comment
         });
 
