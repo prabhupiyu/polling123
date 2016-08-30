@@ -94,27 +94,27 @@
 
  
     
-    <p>
+    <p class="col-sm-12" >
      <em>
         {{poll.totalVotes}} votes counted so far.
          <span ng-show="poll.userChoice">You voted for <strong>{{poll.userChoice.text}}</strong>.</span>
-          <span style="float:right">To share this poll copy link
-         <input type="text" value="http://localhost:3000/shared/{{poll._id}}" style="font-weight:bold; color:black; width:440px;" readonly></span>
+          <span style="float:right;">To share this poll copy link
+         <input id="shr" type="text"  value="http://localhost:3000/shared/{{poll._id}}" style="font-weight:bold; color:black; width:440px;" readonly>
+   <button class="btn btn-default" data-clipboard-action="copy" data-clipboard-target="#shr"> <span class="glyphicon glyphicon-copy"></span> Copy</button></span>
+
 
 
     </em>
 
     </p>
 
-    <p>
-        <hr>
-    </p>
+
 
     <p><a href="#/polls" class="btn btn-default" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Poll List</a></p>
 </div>
 
 <p>&nbsp;</p>
-<<<<<<< HEAD
+<hr>
 
 <!--Comments Area-->
 <div class="container">
@@ -128,6 +128,10 @@
 
     </div>
 </div>
+
+
+
+
 
 <!--Comment Text Area-->
 <div class="container">

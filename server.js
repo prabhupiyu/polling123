@@ -48,6 +48,7 @@ require('./app/routes.js')(app, passport); // load our routes and pass in our ap
 app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/node_modules'));
 app.use(express.static(__dirname + '/uploads'));
+
 // launch ======================================================================
 
 io.sockets.on('connection', routes.vote);
