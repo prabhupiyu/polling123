@@ -1,11 +1,9 @@
-<link rel="stylesheet" href="../stylesheets/style.css">
-<link rel="stylesheet" href="./stylesheets/contactstyle.css">
-<div class="page-header">
-    <h1 id="pollListHead">Profile</h1>
-</div>
-<div class="container" id="profileform">
-
-        <div class="page-header text-center">
+<!--<div class="right_col" role="main"  style="    background: linear-gradient(-45deg, #66cdcc 0%, #336799 100%);">-->
+       
+            
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">  
+             <div class="page-header text-center">
             <h1><span class="fa fa-anchor"></span> Profile Page</h1>
 
         </div>
@@ -16,26 +14,40 @@
             <div class="col-sm-6">
                 <div class="well">
                    <h3><span class="fa fa-user"></span> User</h3>
-                     <img src="./images/2.png" class="img-circle col-lg-3 imgprof" >
+                     <!--<img src="./images/2.png" class="img-circle col-lg-3 imgprof" >-->
+                    <% if(user.local.profpic){ %>
+                        <img src="../<%= user.local.profpic %>" class="img-circle col-lg-3 profilepic"  >
+                    <% } else{ %>
+                        <img src="./images/defaultimage.png" class="img-circle col-lg-3 profthumbs" >
+                    <% } %>
+                    <form method="post" enctype="multipart/form-data" action="/upload">
+                        <input type="file" name="file">
+                            <input type="submit" name="submit" value="Upload">
+                       <input type="hidden" name="email" value="<%= user.local.email %>">
+                        </form>
 
                     <p style="color:black">
-                        <strong>id</strong>:
-                        <%= user._id %>
+                        <strong>User Id</strong>:
+                        <%= user.local.userid %>
                             <br>
-                            <strong>email</strong>:
+                            <strong>First Name</strong>:
+                            <%= user.local.fname %>
+                            <br>
+                             <strong>Last Name</strong>:
+                            <%= user.local.lname %>
+                           <br>
+                            <strong>Email_Id</strong>:
                             <%= user.local.email %>
                                 <br>
-                                <strong>password</strong>:
-                                <%= user.local.password %>
+                                <strong>Phone Number</strong>:
+                                <%= user.local.phno %>
                     </p>
 
                 </div>
             </div>
 
         </div>
-         <!-- <a href="/polls" class="btn btn-default btn-sm">View Polls</a>-->
-
-    </div>
-        <div class="footer col-xs-12">
-    Â© Copyright 2015 Polling Application. All Rights Reserved.
-    </div>
+        </div>
+                
+            </div>
+<!--          </div>-->

@@ -22,6 +22,7 @@ var myModule = angular.module('polls', ['ngRoute','pollServices', 'chart.js']);
 myModule.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.
 			when('/polls', { templateUrl: '/partials/list.ejs', controller: PollListCtrl }).
+            when('/dashboard', { templateUrl: '/partials/dashboard.ejs', controller: PollListCtrl }).
 			when('/poll/:pollId', { templateUrl: '/partials/item.ejs', controller: PollItemCtrl }).
 			when('/new', { templateUrl: '/partials/new.ejs', controller: PollNewCtrl }).
             when('/about', { templateUrl: '/partials/about.ejs', controller: PollNewCtrl }).
@@ -32,7 +33,7 @@ myModule.config(['$routeProvider', function($routeProvider) {
          when('/politics', { templateUrl: '/partials/categories.ejs', controller: PollPoliticsCtrl }).
         when('/general', { templateUrl: '/partials/categories.ejs', controller: PollGeneralCtrl }).
          when('/other', { templateUrl: '/partials/categories.ejs', controller: PollOtherCtrl }).
-//            when('/profile', { templateUrl: '/partials/profile.ejs', controller: PollNewCtrl }).
+            when('/profile', { templateUrl: '/partials/profile.ejs', controller: PollItemCtrl }).
 			// If invalid route, just redirect to the main list view
 			otherwise({ redirectTo: '/polls' });
 	}]);

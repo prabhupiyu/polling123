@@ -1,6 +1,8 @@
-<div >
+<div class="container-fluid">
+    <div class="row">
     <!--    Bar Graph of the votes-->
-    <table class="result-table">
+        <div class="col-md-10">
+            <table class="result-table">
         <tr ng-repeat="choice in poll.choices">
             <td>{{choice.text}}</td>
             <td>
@@ -12,10 +14,12 @@
             </td>
         </tr>
     </table>
-    
+    </div>
+
+    </div>
     <!--    Pie Chart of the votes-->
     
-    
+        <div class="row">
     <div  ng-show="poll.userVoted" >
     
     
