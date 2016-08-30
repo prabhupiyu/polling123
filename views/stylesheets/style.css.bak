@@ -125,15 +125,7 @@
 .newPolls label 
 {
     color:black;
-
 }
-.newPolls
-{
-    background:inherit;
-    border:2px solid white;
-}
-
-
 
 #pollList .list-group-item
 {
@@ -454,64 +446,3 @@
 .login-image{
     border:2px solid;
 }
-
-.newPolls label 
-{
-    color:white;
-
-}
-.newPolls
-{
-      background: background-color:transparent;/*linear-gradient(-45deg, #66cdcc 0%, #336799 100%);*/
-      border:2px solid white;
-
-      border-radius: 10px;
-      -webkit-box-shadow: -2px 15px 49px 0px rgba(0,0,0,0.75);
-      -moz-box-shadow: -2px 15px 49px 0px rgba(0,0,0,0.75);
-      box-shadow: -2px 15px 49px 0px rgba(0,0,0,0.75);
- 
-}
-
-.newPolls .list-group-item{
-  background:inherit;
-  border:none;
-}
-
-
-#pollQuestionPane
-{
-  background:transparent;
-  color:white;
-}
-
-.vote {
-    border-color: white;
-    background: transparent;
-
-      -webkit-box-shadow: -2px 15px 49px 0px rgba(0,0,0,0.75);
-      -moz-box-shadow: -2px 15px 49px 0px rgba(0,0,0,0.75);
-      box-shadow: -2px 15px 49px 0px rgba(0,0,0,0.75);
-}
-
-.vote .list-group-item
-{
-   background:inherit;
-   border:none;
-}
-.pollRadio-info
-{
-  background:white;
-  border-radius:10px;
-}
-
-
-#panelFooter
-{
-  background:transparent;
-}
-
-.panel-footer
-{
-border:none
-}
-
