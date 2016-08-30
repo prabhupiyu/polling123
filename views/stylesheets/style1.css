@@ -156,3 +156,9 @@
   border-radius: 50%;
   margin: 10px auto;
 }
+
+.dashboard-box{
+    width:110%;
+    height:150px;
+}
+

@@ -22,6 +22,7 @@ var myModule = angular.module('polls', ['ngRoute','pollServices', 'chart.js']);
 myModule.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.
 			when('/polls', { templateUrl: '/partials/list.ejs', controller: PollListCtrl }).
+            when('/dashboard', { templateUrl: '/partials/dashboard.ejs', controller: PollListCtrl }).
 			when('/poll/:pollId', { templateUrl: '/partials/item.ejs', controller: PollItemCtrl }).
 			when('/new', { templateUrl: '/partials/new.ejs', controller: PollNewCtrl }).
             when('/about', { templateUrl: '/partials/about.ejs', controller: PollNewCtrl }).
