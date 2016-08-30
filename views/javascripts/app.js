@@ -33,7 +33,7 @@ myModule.config(['$routeProvider', function($routeProvider) {
          when('/politics', { templateUrl: '/partials/categories.ejs', controller: PollPoliticsCtrl }).
         when('/general', { templateUrl: '/partials/categories.ejs', controller: PollGeneralCtrl }).
          when('/other', { templateUrl: '/partials/categories.ejs', controller: PollOtherCtrl }).
-//            when('/profile', { templateUrl: '/partials/profile.ejs', controller: PollNewCtrl }).
+            when('/profile', { templateUrl: '/partials/profile.ejs', controller: PollItemCtrl }).
 			// If invalid route, just redirect to the main list view
 			otherwise({ redirectTo: '/polls' });
 	}]);
