@@ -14,7 +14,7 @@
     <script src="./javascripts/angular.js"></script>
     <script src="./javascripts/angular-resource.js"></script>
     <script src="./javascripts/angular-route.js"></script>
-    <script src="http://10.244.48.103:3000/socket.io/socket.io.js"></script>
+    <script src="http://10.244.36.143:3000/socket.io/socket.io.js"></script>
     <script src="../chart.js/dist/Chart.min.js"></script>
     <script src="../angular-chart.js/dist/angular-chart.min.js"></script>
     <script src="./javascripts/app.js"></script>
@@ -43,7 +43,11 @@
             <!-- menu profile quick info -->
             <div class="profile">
               <div class="profile_pic">
-                <img src="#" alt="..." class="img-circle profile_img">
+               <% if(user.local.profpic){ %>
+                        <img src="../<%= user.local.profpic %>" class="img-circle col-lg-3 profthumbs" >
+                    <% } else{ %>
+                        <img src="./images/defaultimage.png" class="img-circle col-lg-3 profthumbs" >
+                    <% } %>
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -130,7 +134,12 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt=""><%= user.local.fname  %> <%= user.local.lname  %>
+                   <% if(user.local.profpic){ %>
+                        <img src="../<%= user.local.profpic %>" class="img-circle col-lg-3 profthumbs" >
+                    <% } else{ %>
+                        <img src="./images/defaultimage.png" class="img-circle col-lg-3 profthumbs" >
+                    <% } %>
+                      <%= user.local.fname  %> <%= user.local.lname  %>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
