@@ -25,6 +25,8 @@ myModule.config(['$routeProvider', function($routeProvider) {
 			when('/poll/:pollId', { templateUrl: '/partials/item.ejs', controller: PollItemCtrl }).
 			when('/new', { templateUrl: '/partials/new.ejs', controller: PollNewCtrl }).
             when('/about', { templateUrl: '/partials/about.ejs', controller: PollNewCtrl }).
+			  when('/vote/:pollId', { templateUrl: '/partials/vote.ejs', controller: PollItemCtrl }).
+            when('/view/:pollId', { templateUrl: '/partials/view.ejs', controller: PollItemCtrl }).
             when('/sports', { templateUrl: '/partials/categories.ejs', controller: PollSportsCtrl }).
          when('/entertainment', { templateUrl: '/partials/categories.ejs', controller: PollEntertainmentCtrl }).
          when('/politics', { templateUrl: '/partials/categories.ejs', controller: PollPoliticsCtrl }).

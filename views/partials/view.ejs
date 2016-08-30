@@ -1,0 +1,61 @@
+<div >
+    <!--    Bar Graph of the votes-->
+    <table class="result-table">
+        <tr ng-repeat="choice in poll.choices">
+            <td>{{choice.text}}</td>
+            <td>
+                <table style="background-color: lightblue; width: {{choice.votes.length/poll.totalVotes*100}}%; text-align: right">
+                    <tr>
+                        <td>{{choice.votes.length}}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+    <!--    Pie Chart of the votes-->
+    
+    
+    <div  ng-show="poll.userVoted" >
+    
+    
+    <select class='form-control'  id='chart' ng-model="charts" ng-change="chartChange()" >
+    <option ng-selected=true value='pie'> Pie Chart</option>
+    <option value='doughnut'> Doughnut Chart</option>
+    <option value='polar'> Polar Area</option>  
+    
+    </select>
+    
+    
+    
+    <div >
+
+        <canvas  id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-options="options">
+        </canvas>
+    </div>
+
+    <!--Doughnut Chart of votes-->
+    <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
+    </canvas>
+
+    <!--Polar area chart-->
+    <canvas id="polar-area" class="chart chart-polar-area" chart-data="data" chart-labels="labels" chart-options="options">
+    </canvas>
+
+ 
+    
+    <p>
+        <em>
+			{{poll.totalVotes}} votes counted so far.
+			<span ng-show="poll.userChoice">You voted for <strong>{{poll.userChoice.text}}</strong>.</span>
+		</em>
+    </p>
+
+    <p>
+        <hr>
+    </p>
+
+    <p><a href="#/polls" class="btn btn-default" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Poll List</a></p>
+
+</div>
+</div>

@@ -1,22 +1,38 @@
-<div class="page-header">
-    <h1 id="pollListHead" ng-bind="categoryHeading"></h1>
+<div class="page-header" style="color:white">
+    <h1  id="pollListHead" ng-bind="categoryHeading"></h1>
 </div>
 <div class="container-fluid">
 
-    <div class="row">
-        <div class="col-xs-12">
-            <hr>
-        </div>
-    </div>
     <div class="row" ng-switch on="polls.length" id="pollList">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <ul ng-switch-when="0">
+        <div  class="list-group" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <ul   class="list-group-item" ng-switch-when="0">
                 <li><em>No polls in databases. Would you like to <a href="#/new">create one</a>?</li>
-	     </ul>
-        <div >
-            <ul ng-switch-default>
-                <li  ng-repeat="poll in polls | filter:query |orderBy:poll._id" >
-                    <a  href="#/poll/{{poll._id}}">{{poll.question}}</a>
+	        </ul>
+            
+            
+      	<div >
+
+            <ul  class="list-group" ng-switch-default>
+                <li  class="list-group-item" ng-repeat="poll in polls | filter:query |orderBy:poll._id" >
+           
+                    <div class="row">
+                    
+                    <div class="col-md-2">
+                        <div class="review-person">
+                            <img src="/images/poll.png" alt="" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class=" col-md-7 ">
+                        <h3> <a  href="#/poll/{{poll._id}}">{{poll.question}}</a> </h3> 
+                       
+                    </div>
+                          <div class=" col-md-3 ">                          
+                              <div  class="row"> <button class="btn btn-success pull-right" type="button" >View</button></div>
+                              <div class="row"> <button class="btn btn-success pull-right" type="button" >Vote</button></div>                             
+                        </div>
+                    </div>
+                
+                  
                 </li>
             </ul>
         </div>

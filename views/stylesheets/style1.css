@@ -1,0 +1,158 @@
+
+ .result-table {
+     margin: 20px 0;
+     width: 100%;
+     border-collapse: collapse;
+ }
+ 
+ .result-table td {
+     padding: 8px;
+ }
+ 
+ .result-table > tbody > tr > td:first-child {
+     width: 25%;
+     max-width: 300px;
+     text-align: right;
+ }
+ 
+ .result-table td table {
+     background-color: lightblue;
+     text-align: right;
+ }
+ 
+ #signinform {
+     background: rgba(0, 0, 0, 0.8);
+     border-radius: 2px;
+     border-top-right-radius: 2em;
+     border-top-left-radius: 2em;
+     border-bottom-right-radius: 2em;
+     border-bottom-left-radius: 2em;
+ }
+ 
+ #signupform {
+     background: rgba(0, 0, 0, 0.8);
+     border-radius: 2px;
+     border-top-right-radius: 2em;
+     border-top-left-radius: 2em;
+     border-bottom-right-radius: 2em;
+     border-bottom-left-radius: 2em;
+ }
+ 
+ p,
+ h1,
+ label {
+     color: white;
+ }
+ 
+ .jumbotron {
+     background: rgba(0, 0, 0, 0.6) !important;
+     border-radius: 1px !important;
+ }
+ 
+ .carousel-inner > .item > img,
+ .carousel-inner > .item > a > img {
+     width: 70%;
+     margin: auto;
+ }
+ 
+ .carousel {
+     padding-top: 50px;
+     background: rgba(0, 0, 0, 0.5);
+ }
+ /*Styles for the Polls List View*/
+ 
+ #pollListHead {
+     text-align: center;
+     color: black !important;
+ }
+ 
+ #pollList {}
+ /*
+ #pollList ul li {
+     list-style-type: none;
+     font-size: 18px;
+     text-align: center;
+     border-radius: 0.5em !important;   
+     background: rgba(0, 0, 0, 0.8);
+     padding-bottom: 10px;
+     padding-top: 10px;
+     margin-bottom: 5px;
+     box-shadow: 10px 10px 5px #888888;
+ }
+ 
+ #pollList ul li a {
+     display: block;
+     text-decoration: none;
+     font-style: normal;
+     color: white;
+ }
+ 
+ #pollList ul li:hover {
+     font-size: 18px;
+     text-align: center;
+     background-color: rgba(102, 102, 102, 0.8);
+ }
+ */
+
+ /*STYLE FOR THE POLLS VIEW BEFORE VOTING*/
+ 
+ .panel-transparent {
+     background: none;
+ }
+ 
+ .panel-transparent .panel-heading {
+     background: rgba(0, 0, 0, 1);!important;
+     font-size: 40px;
+ }
+ 
+ .panel-transparent .panel-body {
+     background: rgba(0, 0, 0, 0.6);!important;
+ }
+
+#pollOptions{
+      background: rgba(0, 0, 0, 1);!important;
+}
+#panelFooter{
+     background: rgba(0, 0, 0, 0.6);!important;
+}
+#voteButton{
+     background: rgba(0, 0, 0, 1);!important;
+}
+#viewPoll{
+    color: black;!important;
+}
+/*new added*/
+
+.transparent {
+    opacity: 0.7;	
+}
+
+.transparent:hover {
+    opacity: 0.9;
+}
+
+.newPolls label 
+{
+    color:black;
+}
+
+.list-group-item
+{
+ margin:10px; 
+ border-radius: 10px ; 
+ box-shadow: 2px 2px 25px #182125;
+}
+
+.review-person {
+  width: 100%;
+    
+}
+.review-person img {
+  width: 90px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  margin: 10px auto;
+}

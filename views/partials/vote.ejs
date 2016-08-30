@@ -1,0 +1,48 @@
+<!--New Style-->
+<div >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                <p id="viewPoll" class="lead">Please select one of the following options:</p>
+                <div class="panel panel-primary panel-transparent vote">
+                    <div id="pollQuestionPane" class="panel-heading">
+                        <h2 >
+                         {{poll.question}}</h2>
+                    </div>
+                    <div id="pollOptionsPane" class="panel-body">
+
+                        <form role="form" ng-submit="vote()">
+                              <div class="pollRadio">
+                            <div ng-repeat="choice in poll.choices" class="radio">
+
+
+                                <ul class="list-group">
+                                    <li id="pollOptions" class="list-group-item lead">
+                                        <div class="pollRadio-info">
+                                           
+                                                <input  class="" style="color:black" type="radio" name="choice" ng-model="poll.userVote" value="{{choice._id}}"   id="{{choice._id}}">    <label for="{{choice._id}}">{{choice.text}}</label>
+                                           
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>      
+                            <p>
+                                <hr>
+                            </p>
+ <div id="panelFooter" class="panel-footer text-center">
+     <button id="voteButton" class="btn btn-success btn-block btn-sm" type="submit"  ng-disabled="poll.userVoted" >Vote &raquo;</button>
+                       <!-- <button id="voteButton" type="button" class="btn btn-primary btn-block btn-sm">
+                            Vote</button>-->
+                        <a href="#" class="small" style="color: white;"></a></div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
