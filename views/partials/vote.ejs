@@ -7,10 +7,13 @@
             <div class="col-md-6">
                 <p id="viewPoll" class="lead">Please select one of the following options:</p>
                 <div class="panel panel-primary panel-transparent vote">
+                    
+                    
                     <div id="pollQuestionPane" class="panel-heading">
                         <h2 >
                          {{poll.question}}</h2>
                     </div>
+                  
                     <div id="pollOptionsPane" class="panel-body">
 
                         <form role="form" ng-submit="vote()">
@@ -30,11 +33,19 @@
                             </div>
                             </div>      
                          
- <div id="panelFooter" class="panel-footer text-center col-md-5 col-md-offset-3">
-     <button id="voteButton" class="btn btn-primary btn-block btn-sm" type="submit"  ng-disabled="poll.userVoted" >Vote &raquo;</button>
-                       <!-- <button id="voteButton" type="button" class="btn btn-primary btn-block btn-sm">
-                            Vote</button>-->
-                        <a href="#" class="small" style="color: white;"></a></div>
+                        <div id="panelFooter" class="panel-footer text-center col-md-5 col-md-offset-3">
+                        <div class="row">  
+                            <div class="col-md-6">
+                        <button id="voteButton" class="btn btn-primary btn-block " type="submit"  ng-disabled="poll.userVoted" >Vote &raquo;</button>   </div> 
+<div class="col-md-6">
+                        <a  href="#/view/{{poll._id}}">  <button class="btn btn-primary pull-right" type="button" ><span class="glyphicon glyphicon-th-list"></span> View</button></a>
+                        <!-- <button id="voteButton" type="button" class="btn btn-primary btn-block btn-sm">
+                        Vote</button>-->
+                      </div>
+                        <a href="#" class="small" style="color: white;" ng-show="poll.userVoted"> * you have already voted </a>
+
+                        </div>
+                        </div>
                         </form>
                     </div>
 
