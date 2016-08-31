@@ -17,6 +17,20 @@
     </div>
 
     </div>
+    
+          <div  class="row" >
+        <em>
+        <div class="col-md-4 col-md-offset-3">   
+        <input id="shr" type="text"  value="http://localhost:3000/shared/{{poll._id}}"  class="form-control"  readonly>
+        </div>
+        <div class="col-md-5">    
+            <button class="btn btn-primary " data-clipboard-action="copy" data-clipboard-target="#shr"> <span class="glyphicon glyphicon-copy"></span> Copy</button></span>
+</div>
+
+
+        </em>
+
+        </div>
     <!--    Pie Chart of the votes-->
     
         <div class="row">
@@ -47,6 +61,10 @@
     </canvas>
 
  
+        
+            
+  
+
     
     <p>
         <em>
@@ -59,7 +77,45 @@
         <hr>
     </p>
 
-    <p><a href="#/polls" class="btn btn-default" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Poll List</a></p>
+    <p><a href="#/polls" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-arrow-left"></span> Back to Poll List</a></p>
 
 </div>
 </div>
+
+
+<div class="div col-md-6  comment-box">
+ 
+  <h1> Comments</h1>
+  <div class="dialogbox">
+   <div class="row" ng-repeat="comment in poll.comments">
+        <div class="commentImage col-md-1" ng-show="!comment.userdp"> <img src="../37c3eefdf3cf2daecc99c4fbff072d60Chrysanthemum.jpg" class="img-circle col-lg-3 commentpic"></div> <div class="commentImage col-md-1" ng-show="comment.userdp"> <img src="../{{comment.userdp}}" class="img-circle col-lg-3 commentpic"></div>
+       <div class="col-md-8 comment-body">
+        <span class="tip tip-left"></span>
+        <div class="message">
+        <span class="comment-message"><h4> {{comment.comment}}</h3> </span>
+             <div>- {{comment.userid}} </div>
+       </div>   
+       </div>
+       
+   </div>
+  </div>
+    
+        <div class="row">
+            <div class="col-md-12">
+        <form role="form" ng-submit="comment()">
+            <div class="col-md-7">
+            <input class="form-control input-lg comment-input" type="text" placeholder="Add Your Comment Here" ng-model="commenttext">
+            </div>
+            <div class="col-md-3">
+            <button class="btn btn-primary btn-block btn-sm" type="submit">Comment</button>
+            </div>
+        </form>
+        </div>
+    </div>
+  
+
+</div>
+
+
+
+

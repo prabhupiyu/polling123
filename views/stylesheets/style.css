@@ -544,3 +544,89 @@ border:none
    border-bottom:5px solid white;
  }
  
+
+
+
+
+
+.tip {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  background: transparent;
+  border: 10px solid white;
+}
+
+.tip-up {
+  top: -25px; /* Same as body margin top + border */
+  left: 10px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.tip-down {
+  bottom: -25px;
+  left: 10px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;  
+}
+
+.tip-left {
+  top: 5px;
+  left: -25px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;  
+}
+
+.tip-right {
+  top: 10px;
+  right: -25px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;  
+}
+
+
+.comment-body { 
+  background-color:white;
+  border-radius: 10px;
+  border:5px solid white; 
+  margin: 5px 40px;
+}
+
+.message {
+  min-height: 30px;
+  border-radius: 3px;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #797979;
+  border:1px solid white;    
+}
+
+.commentpic {
+    border: 3px solid white;
+    height: 60px;
+    padding: 0 !important;
+    width: 60px;
+}
+
+.comment-box{
+    background: url("../../assets/img/freeze/bk-freeze.jpg");
+    border-radius:10px;
+    margin-bottom: 20px;
+}
+
+.comment-input
+{  
+    border-radius: 10px !important;
+    margin-bottom:10px
+}
+
+.comment-message
+{
+        color: #66cdcc;
+}

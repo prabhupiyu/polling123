@@ -235,7 +235,10 @@
         <div class="right_col" role="main"  style="    background: linear-gradient(-45deg, #66cdcc 0%, #336799 100%);">
 
 <div class="container" >
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6 col-md-offset-3" style="position: absolute; top: 20%;
+    left: 35%;
+    margin-top: -50px;
+    margin-left: -50px;">
 <div class="panel panel-default newPolls">
   <h1 > Profile</h1><hr>
   <div class="row" style="margin-left:10%;">
@@ -268,19 +271,19 @@
         <div class="form-group">
           <label class="col-md-3 control-label">Username:</label>
           <div class="col-md-8">
-            <input class="form-control" value="<%= user.local.userid %>" type="text">
+            <input class="form-control" value="<%= user.local.userid %>" readonly type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">First name:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<%= user.local.fname %>" type="text">
+            <input class="form-control" value="<%= user.local.fname %>" readonly type="text">
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Last name:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<%= user.local.lname %>" type="text">
+            <input class="form-control" value="<%= user.local.lname %>" readonly type="text">
           </div>
         </div>
 <!--
@@ -294,7 +297,7 @@
         <div class="form-group">
           <label class="col-lg-3 control-label">Email:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<%= user.local.email %>" type="text">
+            <input class="form-control" value="<%= user.local.email %>" readonly type="text">
           </div>
         </div>
 <!--
