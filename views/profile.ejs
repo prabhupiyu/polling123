@@ -43,7 +43,6 @@
             <!-- menu profile quick info -->
             <div class="profile">
               <div class="profile_pic">
-                <!--<img src="#" alt="..." class="img-circle profile_img">-->
                   <% if(user.local.profpic){ %>
                         <img src="../<%= user.local.profpic %>" class="img-circle col-lg-3 profthumbs" >
                     <% } else{ %>
@@ -240,7 +239,7 @@
     margin-top: -50px;
     margin-left: -50px;">
 <div class="panel panel-default newPolls">
-  <h1 > Profile</h1><hr>
+  <h1 align="center"> Profile <img src="./images/profile%20logo.jpg"></h1><hr>
   <div class="row" style="margin-left:10%;">
       <!-- left column -->
     <div class="col-md-4 col-sm-6 col-xs-12">
@@ -260,7 +259,8 @@
                     <% } %>
                     <form method="post" enctype="multipart/form-data" action="/upload">
                         <input type="file" name="file">
-                            <input type="submit" name="submit" value="Upload">
+                           <!-- <input type="submit" name="submit" value="Upload">-->
+                        <button class="btn btn-primary " type="submit" style="margin-right:10px;margin-top:5px"  >Submit </button>
                        <input type="hidden" name="email" value="<%= user.local.email %>">
                         </form>
     </div>
@@ -284,6 +284,12 @@
           <label class="col-lg-3 control-label">Last name:</label>
           <div class="col-lg-8">
             <input class="form-control" value="<%= user.local.lname %>" readonly type="text">
+          </div>
+        </div>
+            <div class="form-group">
+          <label class="col-lg-3 control-label">Phone Number:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="<%= user.local.phno %>" readonly type="text">
           </div>
         </div>
 <!--
