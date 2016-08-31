@@ -119,10 +119,12 @@
 <!--Comments Area-->
 <div class="container">
     <div class="row" ng-repeat="comment in poll.comments">
+
         <div class="col-md-3 well">
+            <img src="../{{comment.userdp}}" style="height:50px; width:30px;">
             {{comment.userid}}
         </div>
-        <div class="col-md-9 well">
+        <div class="col-md-6 well">
             {{comment.comment}}
         </div>
 
