@@ -12,7 +12,8 @@ var choiceSchema = new mongoose.Schema({
 var commentsSchema =new mongoose.Schema({
 
 	comment : String,
-    userid   : String
+    userid   : String,
+    userdp : String
 });
 
 // Document schema for polls

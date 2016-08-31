@@ -17,7 +17,7 @@
  
  .result-table td table {
      background-color: lightblue;
-     text-align: right;
+     text-align: left;
  }
  
 
@@ -515,3 +515,118 @@
 border:none
 }
 
+/*
+
+.bar-graph
+{
+ background: linear-gradient(to bottom, rgba(30,87,153,0) 18%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 26%,rgba(41,137,216,1) 51%,rgba(30,87,153,1) 76%,rgba(30,87,153,1) 81%,rgba(30,87,153,0) 83%)!important;
+
+}
+*/
+
+.result-table > tbody > tr > td >table {
+  background: linear-gradient(to bottom, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%);!important;
+/*  background: linear-gradient(to bottom, rgba(255,48,25,1) 12%,rgba(207,4,4,1) 52%,rgba(255,48,25,1) 99%)!important;*/
+ }
+
+.result-table > tbody > tr > td:last-child {
+    border-left:2px solid white;
+ }
+.result-table > tbody > tr > td {
+    color:white;
+    font-size:2em;
+    font-family: "serif";
+ }
+
+
+
+ .result-table > tbody > tr:last-child > td:last-child {
+   border-bottom:5px solid white;
+ }
+
+
+
+
+
+
+.tip {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  background: transparent;
+  border: 10px solid white;
+}
+
+.tip-up {
+  top: -25px; /* Same as body margin top + border */
+  left: 10px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.tip-down {
+  bottom: -25px;
+  left: 10px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.tip-left {
+  top: 5px;
+  left: -25px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.tip-right {
+  top: 10px;
+  right: -25px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+
+.comment-body {
+  background-color:white;
+  border-radius: 10px;
+  border:5px solid white;
+  margin: 5px 40px;
+}
+
+.message {
+  min-height: 30px;
+  border-radius: 3px;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #797979;
+  border:1px solid white;
+}
+
+.commentpic {
+    border: 3px solid white;
+    height: 60px;
+    padding: 0 !important;
+    width: 60px;
+}
+
+.comment-box{
+    background: url("../../assets/img/freeze/bk-freeze.jpg");
+    border-radius:10px;
+    margin-bottom: 20px;
+}
+
+.comment-input
+{
+    border-radius: 10px !important;
+    margin-bottom:10px
+}
+
+.comment-message
+{
+        color: #66cdcc;
+}

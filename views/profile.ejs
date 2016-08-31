@@ -64,13 +64,11 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
-                    </ul>
+<!--
+                  <li><a><i class="fa fa-home"></i> Home </a>
+
                   </li>            
+-->
                   
                   <li >
                         <a href="/polls"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
@@ -159,7 +157,7 @@
                       </a>
                     </li>
                     <li><a href="javascript:;">Help</a></li>
-                    <li><a href="/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 
@@ -235,21 +233,25 @@
 
         <!-- page content -->
         <div class="right_col" role="main"  style="    background: linear-gradient(-45deg, #66cdcc 0%, #336799 100%);">
-       
-            
-            <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">  
-             <div class="page-header text-center">
-            <h1><span class="fa fa-anchor"></span> Profile Page</h1>
 
-        </div>
-
-        <div class="row">
-
-            <!-- LOCAL INFORMATION -->
-            <div class="col-sm-6">
-                <div class="well">
-                   <h3><span class="fa fa-user"></span> User</h3>
+<div class="container" >
+    <div class="col-md-6 col-md-offset-3" style="position: absolute; top: 20%;
+    left: 35%;
+    margin-top: -50px;
+    margin-left: -50px;">
+<div class="panel panel-default newPolls">
+  <h1 > Profile</h1><hr>
+  <div class="row" style="margin-left:10%;">
+      <!-- left column -->
+    <div class="col-md-4 col-sm-6 col-xs-12">
+<!--
+      <div class="text-center">
+        <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>Upload a different photo...</h6>
+        <input type="file" class="text-center center-block well well-sm">
+      </div>
+-->
+        <h3><label><span class="fa fa-user"></span> <%= user.local.fname %></label></h3>
                      <!--<img src="./images/2.png" class="img-circle col-lg-3 imgprof" >-->
                     <% if(user.local.profpic){ %>
                         <img src="../<%= user.local.profpic %>" class="img-circle col-lg-3 profilepic"  >
@@ -261,35 +263,92 @@
                             <input type="submit" name="submit" value="Upload">
                        <input type="hidden" name="email" value="<%= user.local.email %>">
                         </form>
-
-                    <p style="color:black">
-                        <strong>User Id</strong>:
-                        <%= user.local.userid %>
-                            <br>
-                            <strong>First Name</strong>:
-                            <%= user.local.fname %>
-                            <br>
-                             <strong>Last Name</strong>:
-                            <%= user.local.lname %>
-                           <br>
-                            <strong>Email_Id</strong>:
-                            <%= user.local.email %>
-                                <br>
-                                <strong>Phone Number</strong>:
-                                <%= user.local.phno %>
-                        <div  >
-
-
-
-                    </p>
-
-                </div>
-            </div>
-
+    </div>
+    <!-- edit form column -->
+    <div class="col-md-7 col-sm-6 col-xs-12 personal-info">
+        <label><h3>Personal info</h3></label>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-md-3 control-label">Username:</label>
+          <div class="col-md-8">
+            <input class="form-control" value="<%= user.local.userid %>" readonly type="text">
+          </div>
         </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">First name:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="<%= user.local.fname %>" readonly type="text">
+          </div>
         </div>
-                
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Last name:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="<%= user.local.lname %>" readonly type="text">
+          </div>
+        </div>
+<!--
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Company:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="" type="text">
+          </div>
+        </div>
+-->
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Email:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="<%= user.local.email %>" readonly type="text">
+          </div>
+        </div>
+<!--
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Time Zone:</label>
+          <div class="col-lg-8">
+            <div class="ui-select">
+              <select id="user_time_zone" class="form-control">
+                <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                <option value="Alaska">(GMT-09:00) Alaska</option>
+                <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                <option value="Arizona">(GMT-07:00) Arizona</option>
+                <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+              </select>
             </div>
+          </div>
+        </div>
+-->
+
+<!--
+        <div class="form-group">
+          <label class="col-md-3 control-label">Password:</label>
+          <div class="col-md-8">
+            <input class="form-control" value="11111122333" type="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Confirm password:</label>
+          <div class="col-md-8">
+            <input class="form-control" value="11111122333" type="password">
+          </div>
+        </div>
+-->
+<!--
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+            <input class="btn btn-primary" value="Save Changes" type="button">
+            <span></span>
+            <input class="btn btn-default" value="Cancel" type="reset">
+          </div>
+        </div>
+-->
+      </form>
+    </div>
+    </div></div></div>
+</div>
+
           </div>
         <!-- /page content -->
 
@@ -314,7 +373,6 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
       
     <script src="./javascripts/custom.js"></script>  
-      
 
  
     <!-- FastClick
