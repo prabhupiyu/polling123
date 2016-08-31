@@ -17,7 +17,7 @@
  
  .result-table td table {
      background-color: lightblue;
-     text-align: right;
+     text-align: left;
  }
  
 
@@ -515,3 +515,32 @@
 border:none
 }
 
+/*
+
+.bar-graph
+{
+ background: linear-gradient(to bottom, rgba(30,87,153,0) 18%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 26%,rgba(41,137,216,1) 51%,rgba(30,87,153,1) 76%,rgba(30,87,153,1) 81%,rgba(30,87,153,0) 83%)!important;
+   
+}
+*/
+
+.result-table > tbody > tr > td >table {
+  background: linear-gradient(to bottom, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%);!important;
+/*  background: linear-gradient(to bottom, rgba(255,48,25,1) 12%,rgba(207,4,4,1) 52%,rgba(255,48,25,1) 99%)!important;*/
+ }
+
+.result-table > tbody > tr > td:last-child {
+    border-left:2px solid white;
+ }
+.result-table > tbody > tr > td {
+    color:white;
+    font-size:2em;
+    font-family: "serif";
+ }
+
+
+
+ .result-table > tbody > tr:last-child > td:last-child {
+   border-bottom:5px solid white;
+ }
+ 

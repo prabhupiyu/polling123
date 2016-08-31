@@ -2,13 +2,13 @@
     <div class="row">
     <!--    Bar Graph of the votes-->
         <div class="col-md-10">
-            <table class="result-table">
+            <table class="result-table ">
         <tr ng-repeat="choice in poll.choices">
-            <td>{{choice.text}}</td>
-            <td>
-                <table style="background-color: lightblue; width: {{choice.votes.length/poll.totalVotes*100}}%; text-align: right">
+            <td  >{{choice.text}}</td>
+            <td class="bars"  >
+                <table  class="bar-graph" style=" width: {{choice.votes.length/poll.totalVotes*100}}%; text-align: right">
                     <tr>
-                        <td>{{choice.votes.length}}</td>
+                        <td  class="bars" >{{choice.votes.length}}</td>
                     </tr>
                 </table>
             </td>
