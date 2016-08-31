@@ -4151,3 +4151,12 @@ ul.notifications {
     padding: 0px !important;
 
 }
+
+.glyph
+{
+    color: black;
+    font-size: 60px;
+    float: right;
+    margin-top: -17%;
+    margin-right: 5%;
+}
