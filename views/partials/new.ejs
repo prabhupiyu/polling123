@@ -8,15 +8,15 @@
 <form role="form" ng-submit="createPoll()">
  
 	<div  class="panel-heading">	
-         <label for="pollQuestion">Question</label>
-        <textarea ng-model="poll.question" class="form-control" id="pollQuestion" placeholder="Enter poll question"></textarea>
+         <label for="pollQuestion" style="font-size: 18px;">Question</label>
+        <textarea ng-model="poll.question" class="form-control" id="pollQuestion" placeholder="Enter poll question" style="    font-size: 18px;"></textarea>
 	</div>
     <ul class="list-group">
 	<div class="list-group-item">
-		<label for="pollCategory" > 
+		<label for="pollCategory" style="    font-size: 18px;">
             Category</label>
            
-        <select id="pollCategory" class="form-control" ng-model="poll.category" required>
+        <select id="pollCategory" class="form-control" ng-model="poll.category" required style="    font-size: 18px;">
             <option value="Entertainment" ng-selected=true>Entertainment</option>
             <option value="politics">politics</option>
             <option value="Sports">Sports</option>
