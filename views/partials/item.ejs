@@ -51,6 +51,11 @@
 
 <!--******************-->
 <div ng-show="poll.userVoted">
+    <div class="col-md-6" style="color: white;
+    font-size: 2em;
+    font-family: "serif";">
+          Question:  {{poll.question}}
+        </div>
     <!--    Bar Graph of the votes-->
     <table class="result-table">
         <tr ng-repeat="choice in poll.choices">
