@@ -56,7 +56,7 @@
         <tr ng-repeat="choice in poll.choices">
             <td>{{choice.text}}</td>
             <td>
-                <table style="background-color: lightblue; width: {{choice.votes.length/poll.totalVotes*100}}%; text-align: right">
+                <table style=" width: {{choice.votes.length/poll.totalVotes*100}}%; text-align: right">
                     <tr>
                         <td>{{choice.votes.length}}</td>
                     </tr>
