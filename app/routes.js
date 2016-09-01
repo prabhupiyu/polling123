@@ -47,7 +47,7 @@ module.exports = function (app, passport) {
     },*/ passport.authenticate('local-login'),function(req, res){
         var p = req.body.id;
         console.log("printinf p"+p);
-        res.redirect('polls#/poll/'+p);
+        res.redirect('polls#/vote/'+p);
 
     });
 
@@ -65,7 +65,7 @@ module.exports = function (app, passport) {
 
     // process the signup form
     app.post('/signup', passport.authenticate('local-signup', {
-        successRedirect: '/profile', // redirect to the secure profile section
+        successRedirect: '/polls#/dashboard', // redirect to the secure profile section
         failureRedirect: '/signup', // redirect back to the signup page if there is an error
         failureFlash: true // allow flash messages
     }));
@@ -98,7 +98,7 @@ module.exports = function (app, passport) {
             if(signedIn){
                 console.log("user is signed in ");
                 routes.pollShared(id);
-                res.redirect('/polls#/poll/'+id);
+                res.redirect('/polls#/vote/'+id);
 
             }
            else{
